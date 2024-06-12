@@ -81,13 +81,13 @@ st.text('Power bi, Almeida - Análise de Vendas')
 
 
 
-if Ano_vendas == "2024":
-    # st.bar_chart(vendas2024)
-elif Ano_vendas == "2023":
-    # st.bar_chart(vendas2023)
-else:
-    # st.bar_chart(vendas)
-    # st.write(fig)
+# if Ano_vendas == "2024":
+#     # st.bar_chart(vendas2024)
+# elif Ano_vendas == "2023":
+#     # st.bar_chart(vendas2023)
+# else:
+#     # st.bar_chart(vendas)
+#     # st.write(fig)
 
 
 

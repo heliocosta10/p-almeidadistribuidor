@@ -4,11 +4,14 @@ import pandas as pd
 
 
 
-dados = pd.read_excel("20232024f.xlsx")
+
 # vendas_por_ano = dados.loc[(dados["DATA"].dt.year == 2024)]
-vendas = dados.groupby(dados["DATA"].dt.year)["VLTOTAL"].sum()
-vendas2024 = dados.groupby(dados["DATA"].dt.year == '2024')["VLTOTAL"].sum()
-vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
+
+
+# dados = pd.read_excel("20232024f.xlsx")
+# vendas = dados.groupby(dados["DATA"].dt.year)["VLTOTAL"].sum()
+# vendas2024 = dados.groupby(dados["DATA"].dt.year == '2024')["VLTOTAL"].sum()
+# vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
 
 
 
@@ -79,11 +82,11 @@ st.text('Power bi, Almeida - Análise de Vendas')
 
 
 if Ano_vendas == "2024":
-    st.bar_chart(vendas2024)
+    # st.bar_chart(vendas2024)
 elif Ano_vendas == "2023":
-    st.bar_chart(vendas2023)
+    # st.bar_chart(vendas2023)
 else:
-    st.bar_chart(vendas)
+    # st.bar_chart(vendas)
     # st.write(fig)
 
 

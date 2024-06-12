@@ -8,10 +8,10 @@ import pandas as pd
 # vendas_por_ano = dados.loc[(dados["DATA"].dt.year == 2024)]
 
 
-# dados = pd.read_excel("20232024f.xlsx")
+dados = pd.read_excel("20232024f.xlsx")
 # vendas = dados.groupby(dados["DATA"].dt.year)["VLTOTAL"].sum()
-# vendas2024 = dados.groupby(dados["DATA"].dt.year == '2024')["VLTOTAL"].sum()
-# vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
+vendas2024 = dados.groupby(dados["DATA"].dt.year == '2024')["VLTOTAL"].sum()
+vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
 
 
 

@@ -20,7 +20,7 @@ vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
 
 
 with st.sidebar:
-    st.image("img/logo_almeida.png")
+    st.image("logo_almeida.png")
     st.title('Análise de Vendas')
 
     Filial_vendas = st.selectbox("Setor de vendas ",["Site","Força de venda 1"])

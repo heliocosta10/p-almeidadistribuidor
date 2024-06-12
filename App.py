@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+# import plotly.express as px
 
 
 
@@ -58,8 +58,8 @@ with st.sidebar:
 
 # grafico = px.histogram(dados, x="DATA", y="VLTOTAL")
 
-dados = px.data.tips()
-fig = px.ecdf(dados, x="total_bill", color="sex")
+# dados = px.data.tips()
+# fig = px.ecdf(dados, x="total_bill", color="sex")
 # fig.show()
 
 
@@ -84,7 +84,7 @@ elif Ano_vendas == "2023":
     st.bar_chart(vendas2023)
 else:
     st.bar_chart(vendas)
-    st.write(fig)
+    # st.write(fig)
 
 
 

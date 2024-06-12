@@ -8,10 +8,10 @@ import pandas as pd
 # vendas_por_ano = dados.loc[(dados["DATA"].dt.year == 2024)]
 
 
-dados = pd.read_excel("20232024f.xlsx")
-# vendas = dados.groupby(dados["DATA"].dt.year)["VLTOTAL"].sum()
-vendas2024 = dados.groupby(dados["DATA"].dt.year == '2024')["VLTOTAL"].sum()
-vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
+# dados = pd.read_excel("20232024f.xlsx")
+# # vendas = dados.groupby(dados["DATA"].dt.year)["VLTOTAL"].sum()
+# vendas2024 = dados.groupby(dados["DATA"].dt.year == '2024')["VLTOTAL"].sum()
+# vendas2023 = dados.groupby(dados["DATA"].dt.year == '2023')["VLTOTAL"].sum()
 
 
 
@@ -67,14 +67,19 @@ with st.sidebar:
 
 
 # aa = px.histogram(dados, x='continent', y='lifeExp')
-
+@st.cache_data
+def carregar_dados():
+    tabela = pd.read_csv("resultados.csv")
+    return tabela
 
 
 st.text('Power bi, Almeida - Análise de Vendas')
-
-
-
-
+st.write("---")
+qtde_dias = st.selectbox("Selecione o período", ["7D", "15D", "21D", "30D"])
+num_dias = int(qtde_dias.replace("D", ""))
+dados = carregar_dados()
+dados = dados[-num_dias:]
+st.area_chart(dados, x="Data", y="Contratos")
 
 
 
